@@ -7,6 +7,6 @@
     },
     "dependencies": {
         "@azure/storage-blob": "^12.10.0",
-        "formidable": "^3.7.0"
+        "formidable": "^3.6.2"
     }
 }
