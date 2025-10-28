@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: azure-upload-server
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: starter
+    envVars:
+      - key: CONNECTION_STRING
+        value: <your-azure-connection-string>
+      - key: CONTAINER_NAME
+        value: <your-container-name>
+      - key: PORT
+        value: 3001
+    autoDeploy: true
