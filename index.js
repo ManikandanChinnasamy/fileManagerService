@@ -50,8 +50,7 @@ function checkEnvironment() {
     console.log('🔍 Checking environment configuration...');
     
     const requiredEnvVars = [
-        'CONNECTION_STRING',
-        'AZURE_STORAGE_CONNECTION_STRING'
+        'CONNECTION_STRING'
     ];
     
     const missingVars = [];
