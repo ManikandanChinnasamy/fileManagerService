@@ -1,12 +1,34 @@
 {
-    "name": "azure-upload-server",
+    "name": "niq-file-services-server",
     "version": "1.0.0",
-    "main": "index.js",
+    "description": "Integrated File Encryption and Upload Services Server for NIQ File Manager",
+    "main": "file-services-server.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node file-services-server.js",
+        "dev": "nodemon file-services-server.js",
+        "install-server": "npm install express multer @azure/storage-blob cors dotenv",
+        "test-server": "curl http://localhost:3001/health"
     },
+    "keywords": [
+        "file-encryption",
+        "azure-storage",
+        "file-upload",
+        "aes-256-cbc",
+        "nodejs"
+    ],
+    "author": "NIQ Development Team",
+    "license": "NIQ",
     "dependencies": {
-        "@azure/storage-blob": "^12.10.0",
-        "formidable": "^2.0.1"
+        "@azure/storage-blob": "^12.17.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "multer": "^1.4.5-lts.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    },
+    "engines": {
+        "node": ">=16.0.0"
     }
 }
