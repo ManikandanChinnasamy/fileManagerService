@@ -1,18 +1,14 @@
-
-#!/usr/bin/env node
 /**
  * Integrated File Services Server
  * Provides both file encryption and Azure upload services
- * 
+ *
  * Services:
  * - File Encryption Service (AES-256-CBC)
  * - Azure Blob Storage Upload Service
  * - File Processing Pipeline
- * 
+ *
  * Port: 3001 (configurable via PORT env variable)
- */
-
-const express = require('express');
+ */const express = require('express');
 const multer = require('multer');
 const crypto = require('crypto');
 const { BlobServiceClient } = require('@azure/storage-blob');
